@@ -7,6 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\images\Facebook.png" />
+    <None Include="wwwroot\images\Instagram.png" />
+    <None Include="wwwroot\images\LinkedIn.png" />
+    <None Include="wwwroot\images\logo.png" />
+    <None Include="wwwroot\images\Twitter.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Facebook" Version="5.0.15" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.Google" Version="5.0.15" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="5.0.12" />

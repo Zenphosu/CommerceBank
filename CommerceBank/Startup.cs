@@ -29,7 +29,7 @@ namespace CommerceBank
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication()
+            /*services.AddAuthentication()
                 .AddFacebook(options =>
                 {
                     options.ClientId = Configuration["App:FacebookClientId"];
@@ -39,8 +39,8 @@ namespace CommerceBank
                 {
                     options.ClientId = Configuration["App:GoogleClientId"];
                     options.ClientSecret = Configuration["App:GoogleClientSecret"];
-                });
-               
+                });*/
+            services.AddRazorPages();
             services.AddControllersWithViews();
             services.AddScoped<ITransaction, TransactionRepositories>(); /*In case if wish to provide a new implementation to the unit interface
                                                                            we just need to replace the new repository class which also has the
@@ -50,7 +50,7 @@ namespace CommerceBank
 
             services.AddDefaultIdentity<ApplicationUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<TransactionContext>();
-            services.AddRazorPages();
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
